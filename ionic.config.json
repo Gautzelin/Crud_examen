@@ -1,0 +1,7 @@
+{
+  "name": "crud_examen",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
