@@ -1,0 +1,28 @@
+<ion-header>
+	<ion-toolbar color="primary">
+		<ion-title>Sistema de Calificaciones 👨‍🎓</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+	<form (ngSubmit)="login()" [formGroup]="credentials">
+		<ion-item>
+			<ion-label>Email: </ion-label>
+			<ion-input type="email" formControlName="email"></ion-input>
+			<ion-note slot="end" *ngIf="credentials.get('email')?.invalid && (credentials.get('email')?.dirty || credentials.get('email')?.touched)">
+				<ion-text color="danger">Email invalido</ion-text>
+			</ion-note>
+		</ion-item>
+
+		<ion-item>
+			<ion-label>Password: </ion-label>
+			<ion-input type="password" formControlName="password"></ion-input>
+			<ion-note slot="end" *ngIf="credentials.get('password')?.invalid && (credentials.get('password')?.dirty || credentials.get('password')?.touched)">
+				<ion-text color="danger">Contraseña necesita 6 caracteres</ion-text>
+			</ion-note>
+		</ion-item>
+
+		<ion-button type="submit" expand="block" [disabled]="!credentials.valid">Logearse</ion-button>
+		<ion-button type="button" expand="block" color="secondary" (click)="register()">Registrarse</ion-button>
+	</form>
+</ion-content>

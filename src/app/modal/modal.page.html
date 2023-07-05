@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>Agenda</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="note">
+    <ion-item>
+      <ion-label position="stacked">NombreJuego</ion-label>
+      <ion-input [(ngModel)]="note.nombre"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Caracteristicas</ion-label>
+      <ion-input [(ngModel)]="note.Caracteristicas" rows="1"></ion-input>
+    </ion-item>
+ 
+
+  <ion-item>
+    <ion-label position="stacked">Modo_Historia</ion-label>
+    <ion-textarea [(ngModel)]="note.Modo_Historia" rows="1"></ion-textarea>
+  </ion-item>
+
+
+<ion-item>
+  <ion-label position="stacked">Modo_Cooperativo</ion-label>
+  <ion-textarea [(ngModel)]="note.Modo_Cooperativo" rows="1"></ion-textarea>
+</ion-item>
+
+
+<ion-item>
+  <ion-label position="stacked">Limite_de_edad</ion-label>
+  <ion-textarea [(ngModel)]="note.Limite_de_edad" rows="1"></ion-textarea>
+</ion-item>
+
+
+<ion-item>
+  <ion-label position="stacked">Tipo_de_juego</ion-label>
+  <ion-textarea [(ngModel)]="note.Tipo_de_juego" rows="1"></ion-textarea>
+</ion-item>
+
+
+  <ion-button expand="block" color="success" (click)="updateNote()">
+    <ion-icon name="save" slot="start" ></ion-icon>
+    Actualizar
+  </ion-button>
+  <ion-button expand="block" color="danger" (click)="deleteNote()">
+    <ion-icon name="trash" slot="start" ></ion-icon>
+    Eliminar
+  </ion-button>
+  </div>
+</ion-content>

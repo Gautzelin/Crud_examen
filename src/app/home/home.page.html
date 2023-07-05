@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>Sistema de Calificaciones 👨‍🎓</ion-title>
+    <ion-buttons slot="end">
+       <ion-button color="" (click)="logout()">Logout</ion-button>
+      <ion-icon slot="icon-only" name="person-circle"></ion-icon> 
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngFor="let note of notes" (click)="openNote(note)">
+      <ion-label color="tertiary">
+       <h2 color="primary"></h2>
+       Nombre:<span style="color: rgb(255, 255, 255);"> {{ note.nombre }}</span>
+       <br>
+       <br>
+       <!-- Calificacion: <span style="color: aqua;">{{note.total}}</span>  -->
+       <hr color="danger">
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button (click)="addNote()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

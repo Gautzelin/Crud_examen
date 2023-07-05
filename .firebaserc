@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "prueba-91bb8": {
+      "hosting": {
+        "app": [
+          "prueba-91bb8"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "prueba-91bb8"
+  }
+}
